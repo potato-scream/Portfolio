@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
   <meta charset="UTF-8">
@@ -65,7 +65,8 @@
                   <h3 class="card__title">wellmax.eu</h5>
                 </a>
                 <p class="card__text">
-                  В течении года работала над редизайном сайта, верстала страницы с нуля и разбиралась с существующим легаси кодом.
+                  В течении года работала над редизайном сайта, верстала страницы с нуля и разбиралась с существующим
+                  легаси кодом.
                   Крoссбраузерно, адаптивно, в лучших традициях BEM'a.
                 </p>
               </div>
@@ -174,6 +175,15 @@
     </footer>
   </div>
   </div>
+  <script>
+     function bounce () {
+      if (document.readyState == 'complete') {
+        document.querySelector(".header__logo").classList.add("bounce");
+      }
+    };
+
+    document.addEventListener('readystatechange', bounce);
+  </script>
 </body>
 
 </html>

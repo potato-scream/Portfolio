@@ -30,6 +30,7 @@
 }
 
 .header__logo {
+  display: block;
   margin: 0 auto;
   border-radius: 50%;
   background: linear-gradient(#e6646f, #a363b9);
@@ -203,10 +204,24 @@
   margin-right: 16px;
 }
 
+.bounce {
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-name: bounce;
+  animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+}
+
+
+@keyframes bounce {
+  0%   { transform: translateY(-100px); }
+  20%  { transform: translateY(0); }
+  40%  { transform: translateY(-10px); }
+  60% { transform: translateY(0); }
+}
+
 @media (min-width: 768px) {
   .header {
     padding: 30px 16px;
-    position: sticky;
     top: 0;
   }
 
@@ -215,7 +230,6 @@
   }
 
   .footer {
-    position: sticky;
     bottom: 0;
     background-color: transparent;
   }
@@ -235,6 +249,7 @@
 
   .header {
     padding: 30px 16px;
+    position: sticky;
   }
 
   .main__works {
@@ -265,5 +280,9 @@
   .card {
     width: unset;
     margin-bottom: 40px;
+  }
+
+  .footer {
+    position: sticky;
   }
 }
